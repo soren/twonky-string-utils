@@ -37,6 +37,7 @@ public class ToIntegerTest extends TestCase {
      * Illegal values should result in null being returned.
      */
     public void testIllegalValues() {
+        assertNull(StringUtils.toInteger(null));
         assertNull(StringUtils.toInteger("one"));
         assertNull(StringUtils.toInteger("2."));
         assertNull(StringUtils.toInteger(""));
@@ -46,6 +47,7 @@ public class ToIntegerTest extends TestCase {
      * Testing using a default value.
      */
     public void testDefaultValues() {
+        assertEquals(null, StringUtils.toInteger("null", null));
         assertEquals(new Integer(1), StringUtils.toInteger("one", 1));
     }
 }
