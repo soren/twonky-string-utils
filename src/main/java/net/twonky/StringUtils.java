@@ -4,6 +4,8 @@ import java.util.regex.Pattern;
 
 public class StringUtils {
 
+    static final Pattern emptyPattern = Pattern.compile("^[\\s]*$");
+
     /**
      * Converts the given string to an integer.
      *
@@ -85,7 +87,17 @@ public class StringUtils {
      * @return true if string is empty else false.
      */
     static public Boolean isEmpty(String string) {
-        Pattern emptyPattern = Pattern.compile("^[\\s]*$");
         return string == null || emptyPattern.matcher(string).matches();
+    }
+
+    /**
+     * Checks if a string consists of only upper case letters.
+     *
+     * @param string the string to check
+     *
+     * @return true if string contains only upper case letters.
+     */
+    static public Boolean isUpper(String string) {
+        return string == null || string.toUpperCase().equals(string);
     }
 }
