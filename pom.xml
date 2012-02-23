@@ -23,8 +23,8 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:ssh//github.com/soren/${project.artifactId}.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/soren/${project.artifactId}.git</developerConnection>
+        <connection>scm:git://github.com/soren/${project.artifactId}.git</connection>
+        <developerConnection>scm:git:git@github.com/soren/${project.artifactId}.git</developerConnection>
         <url>http://github.com/soren/${project.artifactId}</url>
     </scm>
     <developers>
