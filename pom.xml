@@ -29,6 +29,12 @@
         </developer>
     </developers>
 
+   <issueManagement>
+      <system>GitHub</system>
+      <url>https://github.com/soren/twonky-string-utils/issues/</url>
+   </issueManagement>  
+
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
