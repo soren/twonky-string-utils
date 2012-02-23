@@ -11,7 +11,7 @@
     <artifactId>twonky-string-utils</artifactId>
     <packaging>jar</packaging>
     <name>Twonky String Utils</name>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <description>My little library of string utilities for Java</description>
     <url>http://hub.369.dk/java/twonky-string-utils</url>
     <licenses>
