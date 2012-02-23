@@ -28,21 +28,21 @@ public class IsEmptyTest extends TestCase {
      * Testing empty strings.
      */
     public void testEmptyStrings() {
-        assertTrue(StringUtils.isEmpty(null));
-        assertTrue(StringUtils.isEmpty(""));
-        assertTrue(StringUtils.isEmpty(" "));
-        assertTrue(StringUtils.isEmpty(" \t\n"));
+        assertTrue(StringCheck.isEmpty(null));
+        assertTrue(StringCheck.isEmpty(""));
+        assertTrue(StringCheck.isEmpty(" "));
+        assertTrue(StringCheck.isEmpty(" \t\n"));
     }
 
     /**
      * Testing non-empty strings.
      */
     public void testNonEmptyStrings() {
-        assertFalse(StringUtils.isEmpty("0"));
-        assertFalse(StringUtils.isEmpty("a"));
-        assertFalse(StringUtils.isEmpty("b c"));
-        assertFalse(StringUtils.isEmpty("\nd"));
-        assertFalse(StringUtils.isEmpty("æøå"));
+        assertFalse(StringCheck.isEmpty("0"));
+        assertFalse(StringCheck.isEmpty("a"));
+        assertFalse(StringCheck.isEmpty("b c"));
+        assertFalse(StringCheck.isEmpty("\nd"));
+        assertFalse(StringCheck.isEmpty("æøå"));
     }
 
 }

@@ -28,26 +28,26 @@ public class ToIntegerTest extends TestCase {
      * Testing legal values.
      */
     public void testLegalValues() {
-        assertEquals(1, StringUtils.toInteger("1").intValue());
-        assertEquals(2, StringUtils.toInteger(" 2 ").intValue());
-        assertEquals(-3, StringUtils.toInteger("-3").intValue());
+        assertEquals(1, StringConvert.toInteger("1").intValue());
+        assertEquals(2, StringConvert.toInteger(" 2 ").intValue());
+        assertEquals(-3, StringConvert.toInteger("-3").intValue());
     }
 
     /**
      * Illegal values should result in null being returned.
      */
     public void testIllegalValues() {
-        assertNull(StringUtils.toInteger(null));
-        assertNull(StringUtils.toInteger("one"));
-        assertNull(StringUtils.toInteger("2."));
-        assertNull(StringUtils.toInteger(""));
+        assertNull(StringConvert.toInteger(null));
+        assertNull(StringConvert.toInteger("one"));
+        assertNull(StringConvert.toInteger("2."));
+        assertNull(StringConvert.toInteger(""));
     }
 
     /**
      * Testing using a default value.
      */
     public void testDefaultValues() {
-        assertEquals(null, StringUtils.toInteger("null", null));
-        assertEquals(new Integer(1), StringUtils.toInteger("one", 1));
+        assertEquals(null, StringConvert.toInteger("null", null));
+        assertEquals(new Integer(1), StringConvert.toInteger("one", 1));
     }
 }

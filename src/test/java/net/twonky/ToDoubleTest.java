@@ -28,28 +28,28 @@ public class ToDoubleTest extends TestCase {
      * Testing legal values.
      */
     public void testLegalValues() {
-        assertEquals(1.0, StringUtils.toDouble("1").doubleValue());
-        assertEquals(2.0, StringUtils.toDouble(" 2 ").doubleValue());
-        assertEquals(-3.0, StringUtils.toDouble("-3").doubleValue());
-        assertEquals(4.5, StringUtils.toDouble("4.5").doubleValue());
+        assertEquals(1.0, StringConvert.toDouble("1").doubleValue());
+        assertEquals(2.0, StringConvert.toDouble(" 2 ").doubleValue());
+        assertEquals(-3.0, StringConvert.toDouble("-3").doubleValue());
+        assertEquals(4.5, StringConvert.toDouble("4.5").doubleValue());
     }
 
     /**
      * Illegal values should result in null being returned.
      */
     public void testIllegalValues() {
-        assertNull(StringUtils.toDouble(null));
-        assertNull(StringUtils.toDouble("one"));
-        assertNull(StringUtils.toDouble("2,"));
-        assertNull(StringUtils.toDouble("3.4.5"));
-        assertNull(StringUtils.toDouble(""));
+        assertNull(StringConvert.toDouble(null));
+        assertNull(StringConvert.toDouble("one"));
+        assertNull(StringConvert.toDouble("2,"));
+        assertNull(StringConvert.toDouble("3.4.5"));
+        assertNull(StringConvert.toDouble(""));
     }
 
     /**
      * Testing using a default value.
      */
     public void testDefaultValues() {
-        assertEquals(null, StringUtils.toDouble("null", null));
-        assertEquals(new Double(1.1), StringUtils.toDouble("one", 1.1));
+        assertEquals(null, StringConvert.toDouble("null", null));
+        assertEquals(new Double(1.1), StringConvert.toDouble("one", 1.1));
     }
 }

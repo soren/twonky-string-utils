@@ -4,12 +4,31 @@
     
     <groupId>net.twonky</groupId>
     <artifactId>twonky-string-utils</artifactId>
-    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    
     <name>Twonky String Utils</name>
+    <version>1.0-SNAPSHOT</version>
+    <description>My little library of string utilities for Java</description>
     <url>http://hub.369.dk/java/twonky-string-utils</url>
-    
+    <licenses>
+        <license>
+            <name>GNU General Public License, version 2</name>
+            <url>http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:ssh//github.com/soren/${project.artifactId}.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/soren/${project.artifactId}.git</developerConnection>
+        <url>http://github.com/soren/${project.artifactId}.git</url>
+    </scm>
+    <developers>
+        <developer>
+            <id>slu</id>
+            <name>Søren Lund</name>
+            <email>soren@lund.org</email>
+        </developer>
+    </developers>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

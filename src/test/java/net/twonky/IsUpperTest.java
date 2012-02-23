@@ -28,23 +28,23 @@ public class IsUpperTest extends TestCase {
      * Testing upper strings.
      */
     public void testUpperStrings() {
-        assertTrue(StringUtils.isUpper(null));
-        assertTrue(StringUtils.isUpper("0"));
-        assertTrue(StringUtils.isUpper(""));
-        assertTrue(StringUtils.isUpper(" "));
-        assertTrue(StringUtils.isUpper(" \t\n"));
-        assertTrue(StringUtils.isUpper("A"));
-        assertTrue(StringUtils.isUpper("FOO BAR"));
-        assertTrue(StringUtils.isUpper("ÆØÅ"));
+        assertTrue(StringCheck.isUpper(null));
+        assertTrue(StringCheck.isUpper("0"));
+        assertTrue(StringCheck.isUpper(""));
+        assertTrue(StringCheck.isUpper(" "));
+        assertTrue(StringCheck.isUpper(" \t\n"));
+        assertTrue(StringCheck.isUpper("A"));
+        assertTrue(StringCheck.isUpper("FOO BAR"));
+        assertTrue(StringCheck.isUpper("ÆØÅ"));
     }
 
     /**
      * Testing non-upper strings.
      */
     public void testNonUpperStrings() {
-        assertFalse(StringUtils.isUpper("a"));
-        assertFalse(StringUtils.isUpper("b c"));
-        assertFalse(StringUtils.isUpper("\nd"));
-        assertFalse(StringUtils.isUpper("æøå"));
+        assertFalse(StringCheck.isUpper("a"));
+        assertFalse(StringCheck.isUpper("b c"));
+        assertFalse(StringCheck.isUpper("\nd"));
+        assertFalse(StringCheck.isUpper("æøå"));
     }
 }
