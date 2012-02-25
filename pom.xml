@@ -50,6 +50,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>commons-cli</groupId>
+            <artifactId>commons-cli</artifactId>
+            <version>1.2</version>
+        </dependency>        
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
@@ -58,7 +63,38 @@
     </dependencies>
 
     <build>
+
+        <!-- Configure the source files as resources to be filtered
+             into a custom target directory -->
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/java</directory>
+                <filtering>true</filtering>
+                <targetPath>${basedir}/target/filtered-sources/java</targetPath>
+            </resource>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+        <!-- Overrule the default pom source directory to match
+             our generated sources so the compiler will pick them up -->
+        <sourceDirectory>${basedir}/target/filtered-sources/java</sourceDirectory>
+
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>net.twonky.StringUtils</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -99,6 +135,19 @@
                     </execution>
                 </executions>
             </plugin>                
+            <plugin>
+                <groupId>com.mycila.maven-license-plugin</groupId>
+                <artifactId>maven-license-plugin</artifactId>
+                <version>1.10.b1</version>
+                <configuration>
+                    <strictCheck>true</strictCheck>
+                    <header>src/etc/header.txt</header>
+                    <excludes>
+                        <exclude>.gitignore</exclude>
+                        <exclude>README</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
