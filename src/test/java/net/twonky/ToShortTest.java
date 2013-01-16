@@ -24,15 +24,15 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Unit test for simple toInteger() methods.
+ * Unit test for simple toShort() methods.
  */
-public class ToIntegerTest extends TestCase {
+public class ToShortTest extends TestCase {
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public ToIntegerTest(String testName) {
+    public ToShortTest(String testName) {
         super(testName);
     }
 
@@ -40,37 +40,37 @@ public class ToIntegerTest extends TestCase {
      * @return the suite of tests being tested
      */
     public static Test suite() {
-        return new TestSuite(ToIntegerTest.class);
+        return new TestSuite(ToShortTest.class);
     }
 
     /**
      * Testing legal values.
      */
     public void testLegalValues() {
-        assertEquals(1, StringConvert.toInteger("1").intValue());
-        assertEquals(2, StringConvert.toInteger(" 2 ").intValue());
-        assertEquals(-3, StringConvert.toInteger("-3").intValue());
-        assertEquals(-2147483648, StringConvert.toInteger("-2147483648").intValue());
-        assertEquals(2147483647, StringConvert.toInteger("2147483647").intValue());
+        assertEquals(1, StringConvert.toShort("1").shortValue());
+        assertEquals(2, StringConvert.toShort(" 2 ").shortValue());
+        assertEquals(-3, StringConvert.toShort("-3").shortValue());
+        assertEquals(-32768, StringConvert.toShort("-32768").shortValue());
+        assertEquals(32767, StringConvert.toShort("32767").shortValue());
     }
 
     /**
      * Illegal values should result in null being returned.
      */
     public void testIllegalValues() {
-        assertNull(StringConvert.toInteger(null));
-        assertNull(StringConvert.toInteger("one"));
-        assertNull(StringConvert.toInteger("2."));
-        assertNull(StringConvert.toInteger(""));
-        assertNull(StringConvert.toInteger("-2147483649"));
-        assertNull(StringConvert.toInteger("2147483648"));
+        assertNull(StringConvert.toShort(null));
+        assertNull(StringConvert.toShort("one"));
+        assertNull(StringConvert.toShort("2."));
+        assertNull(StringConvert.toShort(""));
+        assertNull(StringConvert.toShort("-32769"));
+        assertNull(StringConvert.toShort("32768"));
     }
 
     /**
      * Testing using a default value.
      */
     public void testDefaultValues() {
-        assertEquals(null, StringConvert.toInteger("null", null));
-        assertEquals(new Integer(1), StringConvert.toInteger("one", 1));
+        assertEquals(null, StringConvert.toShort("null", null));
+        assertEquals(new Short((short)1), StringConvert.toShort("one", (short)1));
     }
 }

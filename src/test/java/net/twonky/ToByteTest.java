@@ -24,15 +24,15 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Unit test for simple toInteger() methods.
+ * Unit test for simple toByte() methods.
  */
-public class ToIntegerTest extends TestCase {
+public class ToByteTest extends TestCase {
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public ToIntegerTest(String testName) {
+    public ToByteTest(String testName) {
         super(testName);
     }
 
@@ -40,37 +40,37 @@ public class ToIntegerTest extends TestCase {
      * @return the suite of tests being tested
      */
     public static Test suite() {
-        return new TestSuite(ToIntegerTest.class);
+        return new TestSuite(ToByteTest.class);
     }
 
     /**
      * Testing legal values.
      */
     public void testLegalValues() {
-        assertEquals(1, StringConvert.toInteger("1").intValue());
-        assertEquals(2, StringConvert.toInteger(" 2 ").intValue());
-        assertEquals(-3, StringConvert.toInteger("-3").intValue());
-        assertEquals(-2147483648, StringConvert.toInteger("-2147483648").intValue());
-        assertEquals(2147483647, StringConvert.toInteger("2147483647").intValue());
+        assertEquals(1, StringConvert.toByte("1").byteValue());
+        assertEquals(2, StringConvert.toByte(" 2 ").byteValue());
+        assertEquals(-3, StringConvert.toByte("-3").byteValue());
+        assertEquals(-128, StringConvert.toByte("-128").byteValue());
+        assertEquals(127, StringConvert.toByte("127").byteValue());
     }
 
     /**
      * Illegal values should result in null being returned.
      */
     public void testIllegalValues() {
-        assertNull(StringConvert.toInteger(null));
-        assertNull(StringConvert.toInteger("one"));
-        assertNull(StringConvert.toInteger("2."));
-        assertNull(StringConvert.toInteger(""));
-        assertNull(StringConvert.toInteger("-2147483649"));
-        assertNull(StringConvert.toInteger("2147483648"));
+        assertNull(StringConvert.toByte(null));
+        assertNull(StringConvert.toByte("one"));
+        assertNull(StringConvert.toByte("2."));
+        assertNull(StringConvert.toByte(""));
+        assertNull(StringConvert.toByte("-129"));
+        assertNull(StringConvert.toByte("128"));
     }
 
     /**
      * Testing using a default value.
      */
     public void testDefaultValues() {
-        assertEquals(null, StringConvert.toInteger("null", null));
-        assertEquals(new Integer(1), StringConvert.toInteger("one", 1));
+        assertEquals(null, StringConvert.toByte("null", null));
+        assertEquals(new Byte((byte)1), StringConvert.toByte("one", (byte)1));
     }
 }

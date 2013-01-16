@@ -24,15 +24,15 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Unit test for simple toInteger() methods.
+ * Unit test for simple toFloat() methods.
  */
-public class ToIntegerTest extends TestCase {
+public class ToFloatTest extends TestCase {
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public ToIntegerTest(String testName) {
+    public ToFloatTest(String testName) {
         super(testName);
     }
 
@@ -40,37 +40,35 @@ public class ToIntegerTest extends TestCase {
      * @return the suite of tests being tested
      */
     public static Test suite() {
-        return new TestSuite(ToIntegerTest.class);
+        return new TestSuite(ToFloatTest.class);
     }
 
     /**
      * Testing legal values.
      */
     public void testLegalValues() {
-        assertEquals(1, StringConvert.toInteger("1").intValue());
-        assertEquals(2, StringConvert.toInteger(" 2 ").intValue());
-        assertEquals(-3, StringConvert.toInteger("-3").intValue());
-        assertEquals(-2147483648, StringConvert.toInteger("-2147483648").intValue());
-        assertEquals(2147483647, StringConvert.toInteger("2147483647").intValue());
+        assertEquals(1.0f, StringConvert.toFloat("1").floatValue());
+        assertEquals(2.0f, StringConvert.toFloat(" 2 ").floatValue());
+        assertEquals(-3.0f, StringConvert.toFloat("-3").floatValue());
+        assertEquals(4.5f, StringConvert.toFloat("4.5").floatValue());
     }
 
     /**
      * Illegal values should result in null being returned.
      */
     public void testIllegalValues() {
-        assertNull(StringConvert.toInteger(null));
-        assertNull(StringConvert.toInteger("one"));
-        assertNull(StringConvert.toInteger("2."));
-        assertNull(StringConvert.toInteger(""));
-        assertNull(StringConvert.toInteger("-2147483649"));
-        assertNull(StringConvert.toInteger("2147483648"));
+        assertNull(StringConvert.toFloat(null));
+        assertNull(StringConvert.toFloat("one"));
+        assertNull(StringConvert.toFloat("2,"));
+        assertNull(StringConvert.toFloat("3.4.5"));
+        assertNull(StringConvert.toFloat(""));
     }
 
     /**
      * Testing using a default value.
      */
     public void testDefaultValues() {
-        assertEquals(null, StringConvert.toInteger("null", null));
-        assertEquals(new Integer(1), StringConvert.toInteger("one", 1));
+        assertEquals(null, StringConvert.toFloat("null", null));
+        assertEquals(new Float(1.1f), StringConvert.toFloat("one", 1.1f));
     }
 }

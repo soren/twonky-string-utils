@@ -24,15 +24,15 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Unit test for simple toInteger() methods.
+ * Unit test for simple toLong() methods.
  */
-public class ToIntegerTest extends TestCase {
+public class ToLongTest extends TestCase {
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public ToIntegerTest(String testName) {
+    public ToLongTest(String testName) {
         super(testName);
     }
 
@@ -40,37 +40,37 @@ public class ToIntegerTest extends TestCase {
      * @return the suite of tests being tested
      */
     public static Test suite() {
-        return new TestSuite(ToIntegerTest.class);
+        return new TestSuite(ToLongTest.class);
     }
 
     /**
      * Testing legal values.
      */
     public void testLegalValues() {
-        assertEquals(1, StringConvert.toInteger("1").intValue());
-        assertEquals(2, StringConvert.toInteger(" 2 ").intValue());
-        assertEquals(-3, StringConvert.toInteger("-3").intValue());
-        assertEquals(-2147483648, StringConvert.toInteger("-2147483648").intValue());
-        assertEquals(2147483647, StringConvert.toInteger("2147483647").intValue());
+        assertEquals(1L, StringConvert.toLong("1").longValue());
+        assertEquals(2L, StringConvert.toLong(" 2 ").longValue());
+        assertEquals(-3L, StringConvert.toLong("-3").longValue());
+        assertEquals(-9223372036854775808L, StringConvert.toLong("-9223372036854775808").longValue());
+        assertEquals(9223372036854775807L, StringConvert.toLong("9223372036854775807").longValue());
     }
 
     /**
      * Illegal values should result in null being returned.
      */
     public void testIllegalValues() {
-        assertNull(StringConvert.toInteger(null));
-        assertNull(StringConvert.toInteger("one"));
-        assertNull(StringConvert.toInteger("2."));
-        assertNull(StringConvert.toInteger(""));
-        assertNull(StringConvert.toInteger("-2147483649"));
-        assertNull(StringConvert.toInteger("2147483648"));
+        assertNull(StringConvert.toLong(null));
+        assertNull(StringConvert.toLong("one"));
+        assertNull(StringConvert.toLong("2."));
+        assertNull(StringConvert.toLong(""));
+        assertNull(StringConvert.toLong("-9223372036854775809"));
+        assertNull(StringConvert.toLong("9223372036854775808"));
     }
 
     /**
      * Testing using a default value.
      */
     public void testDefaultValues() {
-        assertEquals(null, StringConvert.toInteger("null", null));
-        assertEquals(new Integer(1), StringConvert.toInteger("one", 1));
+        assertEquals(null, StringConvert.toLong("null", null));
+        assertEquals(new Long(1L), StringConvert.toLong("one", 1L));
     }
 }
