@@ -1,9 +1,9 @@
-Twonky String Utils
+# Twonky String Utils [![Build Status](https://travis-ci.org/soren/twonky-string-utils.png?branch=master)](https://travis-ci.org/soren/twonky-string-utils)
 
 Twonky String Utils is my little library of string utilities for Java.
 
 
-USAGE
+## USAGE
 
 To use this library in your own project, you should add the following
 to your Maven pom.xml file:
@@ -16,22 +16,22 @@ to your Maven pom.xml file:
     </dependency>
 
 
-SUPPORT AND DOCUMENTATION
+## SUPPORT AND DOCUMENTATION
 
 Documentation is available at
 
-    http://hub.369.dk/java/twonky-string-utils/
+ - http://hub.369.dk/java/twonky-string-utils/
 
-You can also look for information at
+Issue tracker on Github (report bugs here):
 
-    Issue tracker on Github (report bugs here)
-        https://github.com/soren/twonky-string-utils/issues
+ - https://github.com/soren/twonky-string-utils/issues
 
-    The Central Maven Repository
-        http://search.maven.org/#browse%7C714306314
+The Central Maven Repository:
+
+ - http://search.maven.org/#browse%7C714306314
 
 
-LICENSE AND COPYRIGHT
+## LICENSE AND COPYRIGHT
 
 Copyright (C) 2012 Søren Lund
 
