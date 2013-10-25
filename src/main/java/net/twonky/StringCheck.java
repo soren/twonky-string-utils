@@ -92,6 +92,6 @@ public class StringCheck {
      * @return true if string contains a positive integer else false.
      */
     static public Boolean isPosInt(String string) {
-        return string == null || pintPattern.matcher(string).matches();
-    }    
+        return new Boolean(string == null || pintPattern.matcher(string).matches());
+    }
 }
