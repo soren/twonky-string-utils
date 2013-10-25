@@ -39,7 +39,7 @@ public class StringConvert {
     static public Byte toByte(String string, Byte defaultValue) {
         try {
             if (string == null) throw new NumberFormatException();
-            return Byte.parseByte(string.trim());
+            return new Byte(Byte.parseByte(string.trim()));
         } catch (NumberFormatException e) {
             return defaultValue;
         }
@@ -72,7 +72,7 @@ public class StringConvert {
     static public Short toShort(String string, Short defaultValue) {
         try {
             if (string == null) throw new NumberFormatException();
-            return Short.parseShort(string.trim());
+            return new Short(Short.parseShort(string.trim()));
         } catch (NumberFormatException e) {
             return defaultValue;
         }
@@ -105,7 +105,7 @@ public class StringConvert {
     static public Integer toInteger(String string, Integer defaultValue) {
         try {
             if (string == null) throw new NumberFormatException();
-            return Integer.parseInt(string.trim());
+            return new Integer(Integer.parseInt(string.trim()));
         } catch (NumberFormatException e) {
             return defaultValue;
         }
@@ -138,7 +138,7 @@ public class StringConvert {
     static public Long toLong(String string, Long defaultValue) {
         try {
             if (string == null) throw new NumberFormatException();
-            return Long.parseLong(string.trim());
+            return new Long(Long.parseLong(string.trim()));
         } catch (NumberFormatException e) {
             return defaultValue;
         }
@@ -170,7 +170,7 @@ public class StringConvert {
     static public Float toFloat(String string, Float defaultValue) {
         try {
             if (string == null) throw new NumberFormatException();
-            return Float.parseFloat(string.trim());
+            return new Float(Float.parseFloat(string.trim()));
         } catch (NumberFormatException e) {
             return defaultValue;
         }
@@ -202,7 +202,7 @@ public class StringConvert {
     static public Double toDouble(String string, Double defaultValue) {
         try {
             if (string == null) throw new NumberFormatException();
-            return Double.parseDouble(string.trim());
+            return new Double(Double.parseDouble(string.trim()));
         } catch (NumberFormatException e) {
             return defaultValue;
         }

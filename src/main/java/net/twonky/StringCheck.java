@@ -46,7 +46,7 @@ public class StringCheck {
      * @return true if string is empty else false.
      */
     static public Boolean isEmpty(String string) {
-        return string == null || emptyPattern.matcher(string).matches();
+        return new Boolean(string == null || emptyPattern.matcher(string).matches());
     }
 
     /**
@@ -58,7 +58,7 @@ public class StringCheck {
      * false.
      */
     static public Boolean isUpper(String string) {
-        return string == null || string.toUpperCase().equals(string);
+        return new Boolean(string == null || string.toUpperCase().equals(string));
     }
 
     /**
@@ -70,7 +70,7 @@ public class StringCheck {
      * false.
      */
     static public Boolean isLower(String string) {
-        return string == null || string.toLowerCase().equals(string);
+        return new Boolean(string == null || string.toLowerCase().equals(string));
     }
 
     /**
@@ -81,7 +81,7 @@ public class StringCheck {
      * @return true if string contains an integer else false.
      */
     static public Boolean isInt(String string) {
-        return string == null || intPattern.matcher(string).matches();
+        return new Boolean(string == null || intPattern.matcher(string).matches());
     }
 
     /**
