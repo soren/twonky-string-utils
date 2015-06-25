@@ -1,4 +1,8 @@
-# Twonky String Utils [![Build Status](https://travis-ci.org/soren/twonky-string-utils.png?branch=master)](https://travis-ci.org/soren/twonky-string-utils) [![Dependencies](https://www.versioneye.com/user/projects/55508e3bf7db0d87f90000e4/badge.png)](https://www.versioneye.com/user/projects/55508e3bf7db0d87f90000e4)
+# Twonky String Utils
+
+[![Build Status](https://travis-ci.org/soren/twonky-string-utils.png?branch=master)](https://travis-ci.org/soren/twonky-string-utils)
+[![Dependencies](https://www.versioneye.com/user/projects/55508e3bf7db0d87f90000e4/badge.png)](https://www.versioneye.com/user/projects/55508e3bf7db0d87f90000e4)
+[![Maven Central](https://img.shields.io/maven-central/v/net.twonky/twonky-string-utils.svg])](http://search.maven.org/#browse|714306314)
 
 Twonky String Utils is my little library of string utilities for Java.
 
