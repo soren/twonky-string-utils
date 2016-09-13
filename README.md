@@ -25,7 +25,7 @@ to your Maven pom.xml file:
 
 Documentation is available at
 
- - http://hub.369.dk/java/twonky-string-utils/
+ - https://cloud.369.dk/java/twonky-string-utils/
 
 Issue tracker on Github (report bugs here):
 
