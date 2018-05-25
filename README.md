@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/soren/twonky-string-utils.png?branch=master)](https://travis-ci.org/soren/twonky-string-utils)
 [![BCH compliance](https://bettercodehub.com/edge/badge/soren/twonky-string-utils?branch=master)](https://bettercodehub.com/results/soren/twonky-string-utils)
-[![Dependencies](https://www.versioneye.com/user/projects/55508e3bf7db0d87f90000e4/badge.png)](https://www.versioneye.com/user/projects/55508e3bf7db0d87f90000e4)
 [![Maven Central](https://img.shields.io/maven-central/v/net.twonky/twonky-string-utils.png)](http://search.maven.org/#browse|714306314)
 [![License](https://img.shields.io/github/license/soren/twonky-string-utils.png)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
